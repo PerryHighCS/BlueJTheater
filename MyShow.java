@@ -10,7 +10,17 @@ import org.code.media.*;
 public class MyShow
 {
     public static void main(String[] args) {
+        Scene myScene = new Scene();
         
+        myScene.clear("black");
         
+        Image curtains = new Image("CurtainFrame.png");
+        myScene.drawImage(curtains, 0, 0, 400);
+        
+        myScene.setTextColor("White");
+        myScene.setTextStyle(Font.SANS, FontStyle.BOLD);
+        myScene.drawText("Welcome!", 156, 215);
+        
+        Theater.playScenes(myScene);
     }
 }
